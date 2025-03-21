@@ -81,11 +81,9 @@ class MetroAgi:
 
         return None
 
-# Örnek Kullanım
 if __name__ == "__main__":
     metro = MetroAgi()
 
-    # İstasyonlar ekleme
     metro.istasyon_ekle("K1", "Kızılay", "Kırmızı Hat")
     metro.istasyon_ekle("K2", "Ulus", "Kırmızı Hat")
     metro.istasyon_ekle("K3", "Demetevler", "Kırmızı Hat")
