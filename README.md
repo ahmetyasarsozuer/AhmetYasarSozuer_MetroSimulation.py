@@ -2,7 +2,7 @@ Ankara Metro Simülasyonu
 
 Proje Açıklaması
 
-Bu proje, Ankara'daki metro ağı içerisinde iki istasyon arasındaki en hızlı ve en az aktarmalı rotayı bulmayı amaçlayan bir Python simülasyonudur. Projede gerçek dünya problemlerine çözüm üretmek adına graf veri yapısı ve algoritmalar kullanılmıştır.
+Bu proje, Ankara'daki metro ağı içerisinde iki istasyon arasındaki en hızlı ve en az aktarmalı rotayı bulmayı amaçlayan bir Python simülasyonudur. Projede çözüm üretmek adına graf veri yapısı ve algoritmalar kullanılmıştır.
 
 Kullanılan Teknolojiler ve Kütüphaneler
 
