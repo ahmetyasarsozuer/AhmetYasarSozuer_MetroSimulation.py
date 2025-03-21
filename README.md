@@ -1,34 +1,36 @@
-# Sürücüsüz Metro Simülasyonu (Rota Optimizasyonu)
+Ankara Metro Simülasyonu
 
-## Proje Açıklaması
-Bu proje, bir metro ağı içerisinde iki istasyon arasındaki **en hızlı** ve **en az aktarmalı** rotayı bulmayı amaçlayan bir Python simülasyonudur. Projede gerçek dünya problemlerine çözüm üretmek adına graf veri yapısı ve algoritmalar kullanılmıştır.
+Proje Açıklaması
 
-## Kullanılan Teknolojiler ve Kütüphaneler
-- **Python 3.x**: Projenin ana programlama dili.
-- **collections**: `deque` yapısı ile BFS algoritmasında kuyruk yönetimi için kullanıldı.
-- **heapq**: Öncelik kuyruğu (min-heap) oluşturarak A* algoritmasında en kısa süreli yolları hızlıca seçebilmek için kullanıldı.
+Bu proje, Ankara'daki metro ağı içerisinde iki istasyon arasındaki en hızlı ve en az aktarmalı rotayı bulmayı amaçlayan bir Python simülasyonudur. Projede gerçek dünya problemlerine çözüm üretmek adına graf veri yapısı ve algoritmalar kullanılmıştır.
 
-## Algoritmaların Çalışma Mantığı
+Kullanılan Teknolojiler ve Kütüphaneler
 
-### BFS Algoritması (en az aktarmalı rota)
-- BFS, graf yapısında katman katman gezerek hedefe en kısa aktarma (en az kenar geçişli) yolu bulur.
+- Python 3.x : Projenin ana programlama dili.
+- collections: deque yapısı ile BFS algoritmasında kuyruk yönetimi için kullandım.
+- heapq: Öncelik kuyruğu (min-heap) oluşturarak A* algoritmasında en kısa süreli yolları hızlıca seçebilmek için kullandım.
+
+
+Algoritmaların Çalışma Mantığı
+
+
+BFS Algoritması (en az aktarmalı rota)
+
+- BFS, graf yapısında katman katman gezerek hedefe en kısa aktarma yolu buluyor.
 - İlk olarak başlangıç istasyonu kuyruk yapısına eklenir.
 - Kuyrukta her adımda bir istasyon ve onun yol bilgisi tutulur.
 - Komşu istasyonlar ziyaret edilerek hedef istasyona ulaşılana kadar ilerlenir.
 - İlk hedefe ulaşıldığında o yol döndürülür, böylece en az aktarma sağlanır.
 
-### A* Algoritması (en hızlı rota)
-- A* algoritması, graf üzerinde **toplam süre** bilgisini minimize eden bir yol bulma algoritmasıdır.
-- Burada, `heapq` ile her adımda toplam süresi en düşük olan yol seçilir.
+A* Algoritması (en hızlı rota)
+
+- A* algoritması, graf üzerinde toplam süre bilgisini minimize eden bir yol bulma algoritmasıdır.
+- Burada, heapq ile her adımda toplam süresi en düşük olan yol seçilir.
 - Her istasyon için süre birikerek öncelik kuyruğuna eklenir.
 - Hedef istasyona ulaşıldığında, o ana kadar geçen toplam süre ve rota döndürülür.
 
-### Neden BFS ve A*?
-- **BFS**: En kısa kenar sayısını bulmada çok etkilidir ve hızlıdır.
-- **A\***: Zaman gibi ağırlıklı ölçütlerin optimize edilmesinde yaygın olarak kullanılır.
 
-## Örnek Kullanım ve Test Sonuçları
-
+Örnek Kullanım ve Test Sonuçları
 
 Test Senaryoları
 
@@ -45,17 +47,17 @@ En az aktarmalı rota: Keçiören -> Gar -> Sıhhiye -> Kızılay -> AŞTİ
 En hızlı rota (17 dakika): Keçiören -> Gar -> Sıhhiye -> Kızılay -> AŞTİ
 
 
-## Projeyi Geliştirme Fikirleri
-- Metro haritasını görselleştirmek için **Matplotlib** veya **NetworkX** ile grafik çizimi.
-- Kullanıcıdan dinamik olarak istasyon girişi alıp interaktif hale getirme.
-- JSON veya CSV dosyasından istasyon ve bağlantı verilerini çekme.
-- Metro saatleri ve tren yoğunluğu gibi faktörleri de hesaba katan gelişmiş bir simülasyon.
-- Web arayüzü ile kullanıcıya rota önerileri sunan bir dashboard (Flask/Django).
+Projeyi Geliştirme Fikirleri
+
+- Metro haritasını görselleştirmek.
+- Kullanıcıların istasyon giriş kaydını alıp kalabalığı ölçmek.
+- Saatlere göre sefer sıklığını ayarlamak için giriş kayıtlarından bir veritabanı oluşturmak.
+- Kullanıcılara metronun kalabalık düzeyini yansıtan bir ekran sunmak.
 
 
-Bu proje, graf algoritmalarıyla çalışmayı öğrenmek ve gerçek dünya problemlerine çözüm üretmek için tasarlanmıştır.
+Bu proje Ankara'nın gerçek problemlerine çözüm üretmek için tasarlanmıştır.
 
 
-> Hazırlayan: Ahmet Yaşar Sözüer
-> Mart 2025, GAIH Python Bootcamp
+Hazırlayan: Ahmet Yaşar Sözüer
+Hazırlanan: Mart 2025, Global AI Hub Python Bootcamp
 
